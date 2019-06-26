@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { Text, Flex, Box } from 'rebass';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
-import ContentfulLogo from './Logo/Contenful.svg';
-import GatsbyLogo from './Logo/Gatsby.svg';
+
 
 const FooterContainer = styled.footer`
   padding: 1em;
@@ -54,25 +53,17 @@ const Footer = () => (
             display: 'table',
           }}
         >
-          Powered By
+          Todos os Direitos Reservados. © 2019 FiK Soluções Web
         </Text>
       </span>
       <Flex justifyContent="center" alignItems="center">
-        <Logo
-          url="https://www.contentful.com/"
-          logo={ContentfulLogo}
-          alt="Powered by Contentful"
-        />
+
         <Text m={2} fontSize={4}>
           <span role="img" aria-label="heart">
-            ❤️
+📧 carvalho@jordhan.dev - 📱 (77) 99111-6269
           </span>
         </Text>
-        <Logo
-          url="https://www.gatsbyjs.org/"
-          logo={GatsbyLogo}
-          alt="Gatsby Logo"
-        />
+
       </Flex>
     </Fade>
   </FooterContainer>

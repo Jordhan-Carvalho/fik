@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 import Triangle from '../components/Triangle';
 
@@ -57,13 +58,13 @@ const Background = () => (
 const Contact = () => {
   const classes = useStyles();
     return (
-      <Section.Container id="contact" Background={Background}>
-        <Section.Header name="Contato" icon="✍️" label="contact" />
+      <Section.Container id="contato" Background={Background}>
+        <Section.Header name="Contato" icon="✍️" label="Contato" />
         <div className={classes.root}>
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/sent">
                   <input type="hidden" name="form-name" value="contact" />
                   <TextField
                     id="standard-name"
@@ -95,31 +96,20 @@ const Contact = () => {
         }}
                     />
                   </p>
+                  
+                  <div data-netlify-recaptcha="true" />
+  
                   <p>
-                    <button type="submit">Send</button>
+                    <Button variant="contained" color="primary" type="submit" className={classes.button}>
+        Enviar
+                    </Button>
+          
                   </p>
                 </form>
 
               </Paper>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <Paper className={classes.paper}>xs=12 sm=6</Paper>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Paper className={classes.paper}>xs=12 sm=6</Paper>
-            </Grid>
-            <Grid item xs={6} sm={3}>
-              <Paper className={classes.paper}>xs=6 sm=3</Paper>
-            </Grid>
-            <Grid item xs={6} sm={3}>
-              <Paper className={classes.paper}>xs=6 sm=3</Paper>
-            </Grid>
-            <Grid item xs={6} sm={3}>
-              <Paper className={classes.paper}>xs=6 sm=3</Paper>
-            </Grid>
-            <Grid item xs={6} sm={3}>
-              <Paper className={classes.paper}>xs=6 sm=3</Paper>
-            </Grid>
+            
           </Grid>
         </div>
       </Section.Container>

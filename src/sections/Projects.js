@@ -181,7 +181,7 @@ Project.propTypes = {
 };
 
 const Projects = () => (
-  <Section.Container id="projects" Background={Background}>
+  <Section.Container id="projetos" Background={Background}>
     <Section.Header name="Projetos" icon="💻" Box="notebook" />
     <StaticQuery
       query={graphql`
