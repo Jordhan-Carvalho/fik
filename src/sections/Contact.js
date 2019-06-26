@@ -1,13 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Heading, Text } from 'rebass';
-import { StaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
-import Section from '../components/Section';
-import { CardContainer, Card } from '../components/Card';
+
+
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
 import Triangle from '../components/Triangle';
-import ImageSubtitle from '../components/ImageSubtitle';
+
+
+import Section from '../components/Section';
+
+const useStyles = makeStyles(theme => ({
+  margin: {
+    margin: theme.spacing(1),
+  },
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}));
 
 const Background = () => (
   <div>
@@ -39,47 +54,65 @@ const Background = () => (
 
 
 const Contact = () => {
+  const classes = useStyles();
     return (
-      <Section.Container id="home" Background={Background}>
-  <form name="contact" method="POST" data-netlify="true">
-              <p>
+      <Section.Container id="contact" Background={Background}>
+        <Section.Header name="Contact" icon="✍️" label="contact" />
+        <div className={classes.root}>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+            <Paper className={classes.paper}>
+              <form name="contact" method="POST" data-netlify="true">
+  <p>
     <label>
 Your Name:
 {' '}
 <input type="text" name="name" />
 </label>   
   </p>
-              <p>
+  <p>
     <label>
 Your Email:
 {' '}
 <input type="email" name="email" />
 </label>
   </p>
-              <p>
-    <label>
-Your Role:
-{' '}
-<select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select>
 
-    </label>
-  </p>
-              <p>
+  <p>
     <label>
 Message:
 {' '}
 <textarea name="message"></textarea>
 </label>
   </p>
-              <p>
+  <p>
     <button type="submit">Send</button>
   </p>
-                        </form>
-</Section.Container>
+</form>
 
+            </Paper>
+          </Grid>
+            <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>xs=12 sm=6</Paper>
+          </Grid>
+            <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>xs=12 sm=6</Paper>
+          </Grid>
+            <Grid item xs={6} sm={3}>
+            <Paper className={classes.paper}>xs=6 sm=3</Paper>
+          </Grid>
+            <Grid item xs={6} sm={3}>
+            <Paper className={classes.paper}>xs=6 sm=3</Paper>
+          </Grid>
+            <Grid item xs={6} sm={3}>
+            <Paper className={classes.paper}>xs=6 sm=3</Paper>
+          </Grid>
+            <Grid item xs={6} sm={3}>
+            <Paper className={classes.paper}>xs=6 sm=3</Paper>
+          </Grid>
+          </Grid>
+        </div>
+      </Section.Container>
     )
 }
 
