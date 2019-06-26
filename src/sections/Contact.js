@@ -4,6 +4,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
 
 import Triangle from '../components/Triangle';
 
@@ -57,38 +58,46 @@ const Contact = () => {
   const classes = useStyles();
     return (
       <Section.Container id="contact" Background={Background}>
-        <Section.Header name="Contact" icon="✍️" label="contact" />
+        <Section.Header name="Contato" icon="✍️" label="contact" />
         <div className={classes.root}>
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <Paper className={classes.paper}>
                 <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                   <input type="hidden" name="form-name" value="contact" />
+                  <TextField
+                    id="standard-name"
+                    label="Nome"
+                    name="name"
+                    margin="normal"
+                  />
                   <p>
-                  <label>
-Your Name:
-                    {' '}
-                    <input type="text" name="name" />
-                  </label>   
-                </p>
-                  <p>
-                  <label>
-Your Email:
-                    {' '}
-                    <input type="email" name="email" />
-                  </label>
-                </p>
+                    <TextField
+                      id="standard-email"
+                      label="Email"
+                      name="email"
+                      margin="normal"
+                    />
+                  </p>
+
 
                   <p>
-                  <label>
-Message:
-                    {' '}
-                    <textarea name="message" />
-                  </label>
-                </p>
+                    <TextField
+                      id="standard-full-width"
+                      label="Mensagem"
+                      name="message"
+                      style={{ margin: 8 }}
+                      placeholder="Mensagem"
+                      fullWidth
+                      margin="normal"
+                      InputLabelProps={{
+          shrink: true,
+        }}
+                    />
+                  </p>
                   <p>
-                  <button type="submit">Send</button>
-                </p>
+                    <button type="submit">Send</button>
+                  </p>
                 </form>
 
               </Paper>
