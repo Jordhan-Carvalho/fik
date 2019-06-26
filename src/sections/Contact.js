@@ -61,55 +61,57 @@ const Contact = () => {
         <div className={classes.root}>
           <Grid container spacing={3}>
             <Grid item xs={12}>
-            <Paper className={classes.paper}>
-              <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>
+              <Paper className={classes.paper}>
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="bot-field" />
+                <input type="hidden" name="form-name" value="contact" />
+                <p>
+                  <label>
 Your Name:
-{' '}
-<input type="text" name="name" />
-</label>   
-  </p>
-  <p>
-    <label>
+      {' '}
+      <input type="text" name="name" />
+    </label>   
+                </p>
+                <p>
+                  <label>
 Your Email:
-{' '}
-<input type="email" name="email" />
-</label>
-  </p>
+      {' '}
+      <input type="email" name="email" />
+    </label>
+                </p>
 
-  <p>
-    <label>
+                <p>
+                  <label>
 Message:
-{' '}
-<textarea name="message"></textarea>
-</label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+      {' '}
+      <textarea name="message" />
+    </label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
 
-            </Paper>
-          </Grid>
+              </Paper>
+            </Grid>
             <Grid item xs={12} sm={6}>
-            <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          </Grid>
+              <Paper className={classes.paper}>xs=12 sm=6</Paper>
+            </Grid>
             <Grid item xs={12} sm={6}>
-            <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          </Grid>
+              <Paper className={classes.paper}>xs=12 sm=6</Paper>
+            </Grid>
             <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
+              <Paper className={classes.paper}>xs=6 sm=3</Paper>
+            </Grid>
             <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
+              <Paper className={classes.paper}>xs=6 sm=3</Paper>
+            </Grid>
             <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
+              <Paper className={classes.paper}>xs=6 sm=3</Paper>
+            </Grid>
             <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
+              <Paper className={classes.paper}>xs=6 sm=3</Paper>
+            </Grid>
           </Grid>
         </div>
       </Section.Container>
