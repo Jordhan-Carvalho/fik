@@ -6,6 +6,7 @@ import Projects from '../sections/Projects';
 import Writing from '../sections/Writing';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Contact from '../sections/Contact';
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <Landing />
     <About />
     <Projects />
+    <Contact />
     <Writing />
     <Footer />
   </Layout>
