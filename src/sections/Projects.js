@@ -133,13 +133,7 @@ const Project = ({
               float: 'right',
             }}
           >
-            <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="Check repository"
-                fontAwesomeIcon="github"
-                url={repositoryUrl}
-              />
-            </Box>
+
             <Box mx={1} fontSize={5}>
               <SocialLink
                 name="See project"
