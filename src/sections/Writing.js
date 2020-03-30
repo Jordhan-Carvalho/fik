@@ -107,7 +107,7 @@ const Writing = () => {
 
   return (
     <Section.Container id="posts" Background={Background}>
-      <Section.Header name="Posts" icon="✍️" label="posts" />
+      <Section.Header name="Posts" icon="💡" label="posts" />
       <CardContainer minWidth="300px">
         {allPosts.map(post => Post(post))}
         {Posts.length > 7 ? MorePosts() : null}
