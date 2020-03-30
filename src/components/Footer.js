@@ -4,7 +4,6 @@ import { Text, Flex, Box } from 'rebass';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
 
-
 const FooterContainer = styled.footer`
   padding: 1em;
   background: ${props => props.theme.colors.primaryDark};
@@ -53,17 +52,15 @@ const Footer = () => (
             display: 'table',
           }}
         >
-          Todos os Direitos Reservados. © 2019 FiK Soluções Web
+          Todos os Direitos Reservados. © 2020 FiK Soluções Web
         </Text>
       </span>
       <Flex justifyContent="center" alignItems="center">
-
         <Text m={2} fontSize={4}>
           <span role="img" aria-label="heart">
-📧 carvalho@jordhan.dev - 📱 (77) 99111-6269
+            📧 carvalho@jordhan.dev - 📱 (77) 99111-6269
           </span>
         </Text>
-
       </Flex>
     </Fade>
   </FooterContainer>
